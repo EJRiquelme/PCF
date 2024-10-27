@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="graphicHBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="818.0" style="-fx-background-color: b5b8b1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nameLabel" maxHeight="1.7976931348623157E308" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: f8f8ff;" text="Curso/Usuario/Mensaje" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+         <HBox.margin>
+            <Insets bottom="3.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="presentationLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: f4f4f4;" text="Presentacion/Asunto" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets bottom="3.0" />
+         </HBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="provinceDateLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="85.0" style="-fx-background-color: f4f4f4;" text="00/00/00">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="3.0" left="3.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="townshipDateHourLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="85.0" style="-fx-background-color: f4f4f4;" text="00/00/00">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="3.0" left="3.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>

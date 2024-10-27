@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_general.RegisterCourseController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Registro Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLabel" layoutX="140.0" layoutY="39.0" text="Titulo del Curso*" />
+            <TextField fx:id="titleTextField" layoutX="140.0" layoutY="69.0" prefHeight="24.0" prefWidth="601.0" />
+            <Label fx:id="shortPrLabel" layoutX="144.0" layoutY="202.0" text="Presentación Corta*" />
+            <TextArea fx:id="shortPrTextArea" layoutX="141.0" layoutY="234.0" prefHeight="74.0" prefWidth="878.0" />
+            <Label fx:id="longPrLabel" layoutX="144.0" layoutY="336.0" text="Presentación Detallada" />
+            <TextArea fx:id="longPrTextArea" layoutX="140.0" layoutY="362.0" prefHeight="157.0" prefWidth="881.0" />
+            <Button layoutX="162.0" layoutY="534.0" mnemonicParsing="false" onAction="#switchToCourses" text="Volver" />
+            <Button layoutX="920.0" layoutY="534.0" mnemonicParsing="false" onAction="#registerCourse" text="Registrar" />
+            <DatePicker fx:id="strDatePicker" editable="false" layoutX="821.0" layoutY="69.0" onAction="#selectStrDate" prefHeight="25.0" prefWidth="198.0" />
+            <DatePicker fx:id="endDatePicker" editable="false" layoutX="821.0" layoutY="151.0" onAction="#selectEndDate" prefHeight="25.0" prefWidth="198.0" />
+            <Label fx:id="strDateLabel" layoutX="821.0" layoutY="39.0" text="Fecha de Inicio*" />
+            <Label fx:id="endDateLabel" layoutX="821.0" layoutY="121.0" text="Fecha de Finalizacion*" />
+            <TextField fx:id="tagsTextField" layoutX="140.0" layoutY="148.0" prefHeight="24.0" prefWidth="601.0" />
+            <Label fx:id="tagsLabel" layoutX="140.0" layoutY="118.0" text="Etiquetas" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

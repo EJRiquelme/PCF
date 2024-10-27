@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_virtual_class.StudentsRecords">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="recordCourseLabel" alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Registros Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.5" layoutX="44.0" layoutY="34.0" prefHeight="488.0" prefWidth="1093.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="257.0" layoutY="40.0" text="Alumnos" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="studentsListView" layoutX="23.0" layoutY="73.0" prefHeight="336.0" prefWidth="534.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+                        <Button fx:id="switchToVAButton" layoutX="46.0" layoutY="524.0" mnemonicParsing="false" onAction="#switchToVirtualAula" text="Volver" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="248.0" layoutY="40.0" text="Registros" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="recordsListView" layoutX="21.0" layoutY="73.0" prefHeight="336.0" prefWidth="534.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

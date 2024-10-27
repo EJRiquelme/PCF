@@ -1,0 +1,9 @@
+.list-cell:filled:selected .label {
+	-fx-font-weight: bolder;
+	-fx-text-fill: black;
+}
+
+
+.list-cell:filled:hover .label{
+	-fx-font-weight: bold;
+}

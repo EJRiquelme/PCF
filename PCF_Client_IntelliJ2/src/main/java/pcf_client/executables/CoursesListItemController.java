@@ -1,0 +1,71 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package pcf_client.executables;
+
+import communication.SharedStore;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.layout.HBox;
+import objects.Course;
+
+import java.io.IOException;
+
+/**
+ *
+ * @author william
+ */
+public class CoursesListItemController extends ListCell<Course> {
+
+    private SharedStore sharedStore;
+
+    public CoursesListItemController() {
+        this.sharedStore = SharedStore.getInstance();
+    }
+
+    @FXML
+    private HBox graphicHBox;
+
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private Label provinceDateLabel;
+    @FXML
+    private Label townshipDateHourLabel;
+
+    private FXMLLoader mLLoader;
+
+    @Override
+    protected void updateItem(Course course, boolean empty) {
+        super.updateItem(course, empty);
+
+        if (empty || course == null) {
+
+            setText(null);
+            setGraphic(null);
+
+        } else {
+            if (mLLoader == null) {
+                mLLoader = new FXMLLoader(getClass().getResource("list_element2.fxml"));
+                mLLoader.setController(this);
+
+                try {
+                    mLLoader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            nameLabel.setText(course.getName());
+            provinceDateLabel.setText(sharedStore.getConversions().convertLocalDateToString(course.getStartDate()));
+            townshipDateHourLabel.setText(sharedStore.getConversions().convertLocalDateToString(course.getEndDate()));
+
+            setText(null);
+            setGraphic(graphicHBox);
+        }
+    }
+}

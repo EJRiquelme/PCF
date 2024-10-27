@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_virtual_class.EditTestController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseTitleLabel" alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Nombre Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="questionAnswersAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="834.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="200.0" layoutY="24.0" prefHeight="21.0" prefWidth="168.0" text="Preguntas" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="24.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="saveQuestionButton" layoutX="664.0" layoutY="529.0" mnemonicParsing="false" onAction="#saveQuestion" text="Guardar Pregunta" AnchorPane.rightAnchor="35.0" />
+                  <Button fx:id="newQuestionButton" layoutX="25.0" layoutY="529.0" mnemonicParsing="false" onAction="#looseListFocus" prefHeight="24.0" prefWidth="135.0" text="Nueva pregunta" AnchorPane.leftAnchor="25.0" />
+                  <TextArea fx:id="okTextArea" layoutX="25.0" layoutY="136.0" prefHeight="75.0" prefWidth="774.0" style="-fx-text-fill: green;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="wrong1TextArea" layoutX="25.0" layoutY="211.0" prefHeight="75.0" prefWidth="774.0" style="-fx-text-fill: red;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="wrong2TextArea" layoutX="25.0" layoutY="286.0" prefHeight="75.0" prefWidth="774.0" style="-fx-text-fill: red;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="wrong3TextArea" layoutX="25.0" layoutY="361.0" prefHeight="75.0" prefWidth="774.0" style="-fx-text-fill: red;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="wrong4TextArea" layoutX="25.0" layoutY="436.0" prefHeight="75.0" prefWidth="774.0" style="-fx-text-fill: red;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="questionTextArea" layoutX="25.0" layoutY="55.0" prefHeight="75.0" prefWidth="774.0" style="-fx-control-inner-background: e3e4e5; -fx-border-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="55.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="deleteQuestionButton" layoutX="168.0" layoutY="529.0" mnemonicParsing="false" onAction="#deleteQuestion" prefHeight="24.0" prefWidth="135.0" text="Eliminar Pregunta" AnchorPane.leftAnchor="168.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane fx:id="questionsListAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="328.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="switchToVCButton" layoutX="27.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToVirtualClass" prefHeight="24.0" prefWidth="88.0" text="Volver" AnchorPane.bottomAnchor="37.0" />
+            <ListView fx:id="questionsListView" layoutX="25.0" layoutY="55.0" prefHeight="455.0" prefWidth="270.0" AnchorPane.bottomAnchor="77.0" AnchorPane.topAnchor="55.0" />
+            <Label fx:id="questionsQuantityLabel" layoutX="30.0" layoutY="35.0" text="00/50" />
+            <Button fx:id="configureTestButton" layoutX="170.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToConfigureTest" prefHeight="24.0" prefWidth="122.0" text="Configurar Test" AnchorPane.bottomAnchor="37.0" />
+            <Label fx:id="testTitleLabel" alignment="CENTER" layoutX="25.0" layoutY="15.0" prefHeight="20.0" prefWidth="270.0" text="Titulo Test">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

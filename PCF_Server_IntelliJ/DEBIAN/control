@@ -1,0 +1,8 @@
+Package: tu-paquete
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Tu Nombre <tu@email.com>
+Description: Descripción de tu paquete
+ Información adicional del paquete.

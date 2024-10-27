@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_general.SearchController">
+   <top>
+      <AnchorPane prefHeight="171.0" prefWidth="1160.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="171.0" prefWidth="1160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.15" prefHeight="166.0" prefWidth="1158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <ImageView fitHeight="84.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+
+                                 <image>
+                                    <Image url="@Images/Posible_Logo.jpg" />
+                                 </image>
+
+                              </ImageView>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="955.0">
+                                 <children>
+                                    <ImageView fitHeight="462.0" fitWidth="1061.0" layoutX="-1.0" layoutY="-155.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-2.0">
+
+                                       <image>
+                                          <Image url="@Images/Posible_Imagen_Superior.jpg" />
+                                       </image>
+
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="1158.0">
+                     <children>
+                        <SplitPane dividerPositions="0.25, 0.5, 0.75" prefHeight="114.0" prefWidth="1158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <AnchorPane prefHeight="114.0" prefWidth="282.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="126.0" layoutY="109.0" prefHeight="217.0" prefWidth="287.0" style="-fx-background-color: #6CAAE8;" text="Buscar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="283.0">
+                                 <children>
+                                    <Label fx:id="inboxLabel" alignment="CENTER" layoutX="11.0" layoutY="65.0" onMouseClicked="#switchToInbox" prefHeight="114.0" prefWidth="272.0" style="-fx-background-color: #8CBDEE;" text="Bandeja de Entrada" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="124.0" layoutY="49.0" onMouseClicked="#switchToCourses" prefHeight="114.0" prefWidth="284.0" style="-fx-background-color: #8CBDEE;" text="Mis Cursos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="loginPerfilLabel" alignment="CENTER" layoutX="76.0" layoutY="34.0" onMouseClicked="#switchToLoginPerfil" prefHeight="114.0" prefWidth="286.0" style="-fx-background-color: #8CBDEE;" text="Login / User Name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="61.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="searchMotorUsersListView" layoutX="116.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="20.0" />
+            <ListView fx:id="searchMotorCoursesListView" layoutX="311.0" layoutY="95.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="20.0" />
+         </children></AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="501.0" prefWidth="211.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="tagsLabel" layoutX="26.0" layoutY="200.0" text="Categorias de Cursos" />
+            <TextField fx:id="tagsTextField" layoutX="20.0" layoutY="227.0" />
+            <TextField fx:id="provinceTextField" layoutX="20.0" layoutY="298.0" />
+            <TextField fx:id="townshipTextField" layoutX="20.0" layoutY="371.0" />
+            <Label fx:id="provinceLabel" layoutX="24.0" layoutY="270.0" text="Provincia Profesor" />
+            <Label fx:id="townshipLabel" layoutX="23.0" layoutY="339.0" text="Municipio Profesor" />
+            <Label fx:id="nameLabel" layoutX="24.0" layoutY="130.0" text="Nombre Curso" />
+            <TextField fx:id="nameTextField" layoutX="18.0" layoutY="157.0" />
+            <Button layoutX="74.0" layoutY="431.0" mnemonicParsing="false" onAction="#reloadList" text="Buscar" />
+            <RadioButton fx:id="coursesRadioButton" layoutX="26.0" layoutY="40.0" mnemonicParsing="false" onAction="#chargeRadioButton" selected="true" text="Cursos">
+               <toggleGroup>
+                  <ToggleGroup fx:id="options" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="usersRadioButton" layoutX="26.0" layoutY="83.0" mnemonicParsing="false" onAction="#chargeRadioButton" text="Usuarios" toggleGroup="$options" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

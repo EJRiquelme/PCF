@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_virtual_class.CorrectHomeworkController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseNameLabel" alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Nombre Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="340.0" layoutY="79.0" prefHeight="59.0" prefWidth="488.0" style="-fx-background-color: e3e4e5;" text="Titulo" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="332.0" AnchorPane.topAnchor="79.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="downloadFileButton" layoutX="837.0" layoutY="228.0" mnemonicParsing="false" onAction="#downloadFile" prefHeight="35.0" prefWidth="225.0" text="Descargar Archivo" AnchorPane.leftAnchor="837.0" />
+            <Button fx:id="switchToVCButton" layoutX="99.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToVirtualClass" prefHeight="35.0" prefWidth="100.0" text="Volver" AnchorPane.leftAnchor="99.0" />
+            <ListView fx:id="studentsListView" layoutX="99.0" layoutY="78.0" prefHeight="388.0" prefWidth="230.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="831.0" AnchorPane.topAnchor="78.0" />
+            <Button fx:id="editHomeworkButton" layoutX="229.0" layoutY="478.0" mnemonicParsing="false" onAction="#editHomework" prefHeight="35.0" prefWidth="100.0" text="Editar Tarea" />
+            <Label fx:id="closeDateTimeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="837.0" layoutY="108.0" prefHeight="28.0" prefWidth="225.0" style="-fx-background-color: e3e4e5;" text="Finalización: 14/12/203 23:59" />
+            <Label fx:id="openDateTimeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="837.0" layoutY="78.0" prefHeight="28.0" prefWidth="225.0" style="-fx-background-color: e3e4e5;" text="Inicio: 14/12/203 23:59" />
+            <ListView fx:id="filesListView" layoutX="340.0" layoutY="147.0" prefHeight="364.0" prefWidth="489.0" />
+            <AnchorPane layoutX="837.0" layoutY="156.0" prefHeight="59.0" prefWidth="225.0" style="-fx-background-color: e3e4e5;">
+               <children>
+                  <Button fx:id="calificateButton" layoutX="12.0" layoutY="10.0" mnemonicParsing="false" onAction="#scoreStudentHomework" prefHeight="37.0" prefWidth="125.0" text="Calificar" AnchorPane.leftAnchor="12.0" />
+                  <TextField fx:id="calificationTextField" alignment="CENTER" layoutX="145.0" layoutY="8.0" prefHeight="41.0" prefWidth="69.0" text="00.00" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_virtual_class.CreateModifyDeleteFileController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseTitleLabel" alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Nombre Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="titleResourceTextField" layoutX="138.0" layoutY="126.0" prefHeight="31.0" prefWidth="439.0" />
+            <Label fx:id="titleResourceLabel" alignment="CENTER" layoutX="152.0" layoutY="97.0" text="Titulo del Material*">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="switchToVCButton" layoutX="166.0" layoutY="491.0" mnemonicParsing="false" onAction="#switchToVirtualClass" prefHeight="24.0" prefWidth="93.0" text="Volver" />
+            <Button fx:id="searchFileButton" layoutX="721.0" layoutY="96.0" mnemonicParsing="false" onAction="#searchFile" text="Buscar Archivo" />
+            <AnchorPane layoutX="884.0" layoutY="122.0" prefHeight="41.0" prefWidth="168.0" style="-fx-background-color: e3e4e5;">
+               <children>
+                  <CheckBox fx:id="hiddenCheckBox" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="Ocultar por ahora" />
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="presentationTextArea" layoutX="138.0" layoutY="218.0" prefHeight="241.0" prefWidth="919.0" />
+            <Label fx:id="presentationLabel" layoutX="152.0" layoutY="189.0" prefHeight="16.0" prefWidth="121.0" text="Presentacion" />
+            <TextField fx:id="fileTextField" alignment="CENTER" editable="false" layoutX="594.0" layoutY="131.0" prefHeight="24.0" prefWidth="274.0" promptText=".pdf, .docx, .odt" />
+            <Label fx:id="fileLabel" layoutX="594.0" layoutY="100.0" prefHeight="16.0" prefWidth="115.0" text="Nombre Archivo*" />
+            <Button fx:id="uploadFileButton" layoutX="948.0" layoutY="491.0" mnemonicParsing="false" onAction="#uploadFile" text="Subir Material" />
+            <Button fx:id="deleteFileButton" layoutX="518.0" layoutY="491.0" mnemonicParsing="false" onAction="#deleteFile" text="Eliminar Archivo" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

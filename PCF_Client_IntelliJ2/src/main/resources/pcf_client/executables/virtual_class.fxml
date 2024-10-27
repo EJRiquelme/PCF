@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers_virtual_class.VirtualClassController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="200.0" style="-fx-background-color: #8CBDEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseTitleLabel" alignment="CENTER" prefHeight="82.0" prefWidth="1160.0" text="Nombre Curso" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="73.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Posible_Logo.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="studentRecordsButton" layoutX="173.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToRecords" text="Registros Alumnos" />
+            <Button fx:id="endCourseButton" layoutX="857.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToEndAndScores" text="Configuracion Final de Curso" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane maxHeight="590.0" maxWidth="1160.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.32037996545768566" layoutX="44.0" layoutY="34.0" prefHeight="488.0" prefWidth="1093.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="142.0" layoutY="22.0" text="Temas" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="22.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="unitsListView" layoutX="23.0" layoutY="73.0" prefHeight="438.0" prefWidth="305.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+                        <Button fx:id="newUnitButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCreateUnit" text="Nuevo Tema" AnchorPane.bottomAnchor="544.0" />
+                        <Button fx:id="switchToCoursesListButton" layoutX="20.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToCoursesList" prefHeight="24.0" prefWidth="97.0" text="Volver" />
+                        <Button fx:id="configureButton" layoutX="197.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToConfigureUnit" text="Configurar Tema" />
+                        <Button fx:id="reorderUnitsButton" layoutX="224.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToReorderUnits" prefHeight="24.0" prefWidth="102.0" text="Reordenar" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="154.0" layoutY="23.0" text="Material" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="346.0" AnchorPane.topAnchor="23.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="newHomeworkButton" layoutX="593.0" layoutY="358.0" mnemonicParsing="false" onAction="#switchToCreateHomework" prefHeight="50.0" prefWidth="160.0" text="Nueva Tarea" AnchorPane.rightAnchor="31.0" />
+                        <ListView fx:id="resourcesListView" layoutX="21.0" layoutY="73.0" prefHeight="438.0" prefWidth="551.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="213.0" AnchorPane.topAnchor="60.0" />
+                        <Button fx:id="uploadArchiveButton" layoutX="593.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchToUploadFile" prefHeight="50.0" prefWidth="160.0" text="Subir Material" AnchorPane.rightAnchor="31.0" />
+                        <Button fx:id="newTestButton" layoutX="593.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToCreateTest" prefHeight="50.0" prefWidth="160.0" text="Nuevo Test" />
+                        <Button fx:id="reorderResourcesButton" layoutX="138.0" layoutY="22.0" mnemonicParsing="false" onAction="#switchTOReorderResources" text="Reordenar" />
+                        <Button fx:id="uploadLinkButton" layoutX="593.0" layoutY="229.0" mnemonicParsing="false" onAction="#switchToCreateLink" prefHeight="50.0" prefWidth="160.0" text="Publicar Enlace" AnchorPane.rightAnchor="31.0" />
+                        <Button fx:id="switchToResource" layoutX="593.0" layoutY="60.0" mnemonicParsing="false" onAction="#switchToConsultResource" prefHeight="50.0" prefWidth="160.0" text="Ver Material" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
